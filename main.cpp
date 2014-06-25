@@ -1,10 +1,10 @@
 
-#include <Point.h>
+#include <Pixel.h>
 #include <Image.h>
 
 int main() {
 	
-	Point first_point;
+	Pixel first_point;
 	Image first_image;
 
 	if(!first_image.loadImage("binary.png", false)) {
