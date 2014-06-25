@@ -8,20 +8,24 @@ class Pixel {
 	public:
 		Pixel();
 		Pixel(Pixel const&);
-		Pixel(double, double);
+		Pixel(int, int);
 		~Pixel();
 
 		//getter
-		double get_x() const;
-		double get_y() const;
+		int get_x() const;
+		int get_y() const;
+		double get_intensity() const;
+
 
 		//setter
-		void set_x(double);
-		void set_y(double);
+		void set_x(int);
+		void set_y(int);
+		void set_intensity(double);
 
 	private:
-		double	x;
-		double	y;
+		int		x;
+		int		y;
+		double intensity;
 
 };
 
