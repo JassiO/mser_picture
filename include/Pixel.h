@@ -1,15 +1,15 @@
 
-#if !defined(POINT_HPP)
+#if !defined(PIXEL_HPP)
 
-#define POINT_HPP
+#define PIXEL_HPP
 
-class Point {
+class Pixel {
 
 	public:
-		Point();
-		Point(Point const&);
-		Point(double, double);
-		~Point();
+		Pixel();
+		Pixel(Pixel const&);
+		Pixel(double, double);
+		~Pixel();
 
 		//getter
 		double get_x() const;
