@@ -19,10 +19,11 @@ Image::Image(std::string filename, bool is_color) {
 	width 	= img.rows;
 	height 	= img.cols;
 
-	std::vector<double> rowvec;
-	for (int i = 0; i < width; ++i) {
-		for(int j = 0; j < height; ++j) {
-			rowvec[j] = img.at<double>(i,j);
+	std::vector<Pixel> rowvec;
+	for (int i = 0; i < height; ++i) {
+		for(int j = 0; j < width; ++j) {
+			Pixel* p = new Pixel(i, j, img.at<double>(i, j)); 
+			rowvec[j] = *p;
 		}
 		pixels.push_back(rowvec);
 	}
@@ -36,6 +37,18 @@ bool Image::loadImage(std::string filename, bool is_color) {
 	}
 	else {
 		img = cv::imread(filename, CV_LOAD_IMAGE_GRAYSCALE);
+	}
+
+	width 	= img.rows;
+	height 	= img.cols;
+
+	std::vector<Pixel> rowvec;
+	for (int i = 0; i < height; ++i) {
+		for(int j = 0; j < width; ++j) {
+			Pixel* p = new Pixel(i, j, img.at<double>(i, j)); 
+			rowvec[j] = *p;
+		}
+		pixels.push_back(rowvec);
 	}
 	
 	if(img.data) {

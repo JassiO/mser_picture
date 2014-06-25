@@ -1,5 +1,5 @@
 #include <opencv2/opencv.hpp>
-#include <Point.h>
+#include <Pixel.h>
 
 #if !defined(IMAGE_HPP)
 
@@ -23,7 +23,7 @@ class Image {
 		cv::Mat								img;
 		int 								width;
 		int 								height;
-		std::vector<std::vector<double> >	pixels;
+		std::vector<std::vector<Pixel> >	pixels;
 
 };
 
