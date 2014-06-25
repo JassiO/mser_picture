@@ -8,6 +8,7 @@ class Pixel {
 	public:
 		Pixel();
 		Pixel(Pixel const&);
+		Pixel(int, int, double);
 		Pixel(int, int);
 		~Pixel();
 

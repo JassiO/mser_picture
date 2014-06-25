@@ -7,9 +7,15 @@ Pixel::Pixel():
 	intensity(0.0)
 	{}
 
-Pixel::Pixel(Pixel const& p, double i):
+Pixel::Pixel(Pixel const& p):
 	x(p.get_x()),
 	y(p.get_y()),
+	intensity(p.get_intensity())
+	{}
+
+Pixel::Pixel(int ix, int iy, double i):
+	x(ix),
+	y(iy),
 	intensity(i)
 	{}
 
